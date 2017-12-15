@@ -12,6 +12,7 @@ font-family: 'Roboto Condensed', sans-serif;
 * {
 	box-sizing: border-box;
 	font-family: 'Roboto Condensed', sans-serif;
+	transition: all ease .3s;
 }
 html {
 	font-size: 16px;
@@ -19,7 +20,7 @@ html {
 
 img {
 	width: 100%;
-	height: auto;
+	/*height: auto;*/
 }
 
 .container {
@@ -113,7 +114,15 @@ header {
 	background-color: #0022b4;
 	padding: 20px 10%;
 	text-align: center;
-	border-bottom: 20px solid #bf0003;
+	border-top: 10px solid #bf0003;
+}
+
+.swoosh {
+	/*background: url(../img/swoosh.svg)no-repeat center center;
+	background-size: 108% auto;
+	max-height: 100px;
+	min-height: 50px;*/
+	width: 100%;
 }
 
 .title-wrap {
@@ -147,9 +156,11 @@ header nav ul li a {
 	font-family: 'Roboto Condensed', sans-serif;
 	letter-spacing: .1em;
 	text-decoration: none;
+
 }
 header nav ul li a:hover {
-	color: #bf0003;
+	border-bottom: 5px solid #bf0003;
+	padding-bottom: 5px;
 }
 
 
@@ -182,6 +193,10 @@ header nav ul li a:hover {
 
 .intro-wrap .content-wrap ul li i {
 	color: #bf0003;
+	font-size: 18px;
+	position: relative;
+	top: -5px;
+	margin-right: 10px;
 }
 
 .intro-wrap .image-wrap {
@@ -190,7 +205,7 @@ header nav ul li a:hover {
 }
 
 .intro-wrap .image-wrap img {
-	border: 20px solid #bf0003;
+	border: 10px solid #bf0003;
 }
 
 .donate-wrap {
@@ -219,35 +234,116 @@ header nav ul li a:hover {
 	float: left;
 }
 
+.knows-col img {
+	border: 10px solid #bf0003 ;
+}
+
 .letter-wrap {
 	padding: 50px 0 0 0;
-	background-color: #e0e0e0;
+	background-color: #0022b4;
 }
 
 .letter-wrap .letter {
 	background-color: #fff;
 	padding: 30px;
-	width: 90%;
-	max-width: 900px;
+	width: 95%;
 	margin: 0 auto;
-	box-shadow: 0 0 15px 5px #d0d0d0;
+	box-shadow: 0 0 15px 5px #000099;
 }
+
+.letter .text-wrap {
+	width: 60%;
+	float: left;
+}
+
+.letter .text-wrap img {
+	max-width: 200px;
+	height: auto;
+}
+
+.sticker-wrap {
+	float: right;
+	width: 35%;
+	margin-left: 5%;
+}
+
+
 
 footer {
 	background-color: #303030;
 	padding: 25px;
-	text-align: center;
+	/*text-align: center;*/
 }
 
 footer a {
-	margin: 0 25px;
+	margin: 0 25px 0 0;
 	color: #fff;
+	text-decoration: none;
+}
+
+footer a:hover {
+	color: #bf0003;
 }
 
 footer i {
 	font-size: 1.75rem;
+	margin-right: 10px;
 }
 
 footer p {
 	color: #fff;
+	margin: 0 0 5px 0;
+}
+
+@media only screen and (max-width: 768px) {
+	html {
+		font-size: 14px;
+	}
+
+	h2 {
+		text-align: left;
+	}
+	.knows-wrap h2 {
+		text-align: left;
+	}
+
+	.donate-wrap {
+		text-align: left;
+	}
+
+	.title-wrap {
+		width: 100%;
+	}
+
+	header nav {
+		width: 100%;
+		margin-top: 20px;
+	}
+	header nav ul {
+		text-align: left;
+	}
+	header nav ul li {
+		padding: 0 4% 0 0;
+	}
+	.intro-wrap .content-wrap {
+		width: 100%;
+		margin-right: 0%;
+		float: none;
+	}
+	.knows-col {
+		width: 100%;
+	}
+	.letter .text-wrap {
+		width: 100%;
+		float: none;
+	}
+
+	.sticker-wrap {
+		width: 100%;
+		float: none;
+		margin: 0;
+	}
+	footer a {
+		display: block;
+	}
 }
